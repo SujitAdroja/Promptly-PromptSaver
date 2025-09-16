@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="differnet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Promptly - Prompt Saver</title>
+  </head>
+  <body>
+    <!-- <h3>Promptly</h3> -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="/images/Prompt.png" alt="Prompt Logo" />
+        </div>
+        <div class="logo-text">romptly</div>
+      </div>
+      <div class="theme-button">
+        <button class="button-theme sun">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 48 48"
+          >
+            <path fill="#FF9800" d="M11 11H37V37H11z"></path>
+            <path
+              fill="#FF9800"
+              d="M11.272 11.272H36.728V36.728H11.272z"
+              transform="rotate(-45.001 24 24)"
+            ></path>
+            <path
+              fill="#FFEB3B"
+              d="M13,24c0,6.077,4.923,11,11,11c6.076,0,11-4.923,11-11s-4.924-11-11-11C17.923,13,13,17.923,13,24"
+            ></path>
+          </svg>
+        </button>
+        <button class="button-theme moon">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 30 30"
+          >
+            <path
+              fill="black"
+              fill-rule="evenodd"
+              d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="promptHeader">
+      <input
+        type="text"
+        id="myInput"
+        placeholder="Search Prompts..."
+        class="prompt"
+      />
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="all">All</button>
+      <button class="tab" data-tab="favorites">Favorites</button>
+      <button class="tab" data-tab="categories">Categories</button>
+    </div>
+
+    <div class="promptlistContainer">
+      <ul id="list" class="listContainer"></ul>
+    </div>
+    <button class="fab">+</button>
+
+    <!-- adding new prompt -->
+    <div class="modal" id="promptModal">
+      <div class="modal-content">
+        <div class="form-tabs">
+          <p class="form-tab from-tab-prompt active">Prompt</p>
+          <p class="form-tab form-tab-category">Category</p>
+        </div>
+        <form id="promptForm">
+          <div class="form-group">
+            <label class="form-label" for="prompt">Prompt</label>
+            <textarea
+              type="text"
+              class="form-input"
+              placeholder="Enter prompt"
+              id="prompt"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="promptTag">Tag Name</label>
+            <input
+              type="text"
+              class="form-input"
+              id="promptTag"
+              placeholder="e.g., Writing, Development, Business..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="prompt-category">Category</label>
+            <div class="form-group">
+              <select
+                class="category-select promptCategorySelection"
+                id="prompt-category"
+              >
+                <option class="selectedCategory" value="all">All</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" class="btn btn-primary">Save Prompt</button>
+          </div>
+        </form>
+
+        <form class="category-form" id="categoryForm">
+          <div class="form-group">
+            <label class="form-label" for="promptTag">Category</label>
+            <input
+              type="text"
+              class="form-input"
+              id="category"
+              placeholder="Add Category"
+              required
+            />
+          </div>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-primary">Save Category</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="db.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
