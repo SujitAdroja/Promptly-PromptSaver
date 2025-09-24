@@ -3,7 +3,7 @@
   "name": "Prompt Saver",
   "version": "1.0",
   "description": "Save, search, and organize AI prompts into categories with favorites. Perfect for ChatGPT, Claude, Gemini Perplexity and many more.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": [],
   "short_name": "Promply",
   "background": {
     "service_worker": "background.js"
