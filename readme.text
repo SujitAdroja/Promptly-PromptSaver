@@ -1,0 +1,239 @@
+
+/* dark theme */
+.dark {
+  background: #1a1a1a;
+  color: #ffffff !important;
+}
+.dark .header {
+  background: #262626;
+  border-bottom: 1px solid #404040;
+}
+.dark .logo-text {
+  color: white;
+}
+.dark .add-category-box {
+  border: 1px solid #404040;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dark .promptHeader {
+  border-bottom: 1px solid #404040;
+  border: none;
+}
+.dark .prompt {
+  background: #1a1a1a;
+  border: 1px solid #404040;
+  color: #ffff;
+}
+.dark .category-input {
+  background: #1a1a1a;
+  border: none;
+  color: white;
+}
+.dark .add-category-btn:hover {
+  color: #025d3e;
+}
+.dark .promtp:hover {
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.1);
+}
+.dark .tabs {
+  background: #1a1a1a;
+}
+.dark .tab {
+  background: #262626;
+  border: 1px solid #404040;
+}
+.dark .form-tab {
+  background: #262626;
+  border: 1px solid #404040;
+  color: #ffff;
+}
+.dark .tab.active,
+.dark .tab:hover,
+.dark .form-tab:hover,
+.dark .form-tab.active {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: #14b8a6;
+  color: #14b8a6;
+}
+.dark .listItem {
+  background: #262626;
+  border: 1px solid #404040;
+}
+.dark .listItem:hover {
+  border-color: #14b8a6;
+}
+.dark .listItem .promptDesciption {
+  color: #fff;
+}
+.dark .date {
+  color: #6b7280;
+}
+.dark .listHeader span {
+  background: rgba(107, 114, 128, 0.2);
+
+  color: #9ca3af;
+}
+
+.dark .modal-content {
+  background: #262626;
+  border: 1px solid #14b8a6;
+  box-shadow: 0 0 10 #14b8a6 !important;
+}
+
+.dark .form-label {
+  color: #d1d5db;
+}
+.dark .form-input {
+  background: #1a1a1a;
+  border: 1px solid #404040;
+  color: #ffff;
+}
+.dark .form-input:focus {
+  outline: none;
+  border-color: #14b8a6;
+}
+.dark .category-select {
+  background: #1a1a1a;
+  border: 1px solid #404040;
+  color: #ffffff;
+}
+.dark .promptCategorySelection {
+  background: #1a1a1a;
+  border: 1px solid #404040;
+  color: #ffffff;
+  width: 50%;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* dark categories */
+.dark .category {
+  border: none;
+  border-bottom: 1px solid #404040;
+  border-radius: 0;
+}
+.dark .category-dropdown {
+  border-radius: 0;
+}
+
+.dark .categoryListItem {
+  border: 1px solid #404040;
+  border-radius: none;
+}
+.dark .category-dropdown h2 {
+  color: white;
+}
+
+/* form btn */
+.dark .btn-primary {
+  background: linear-gradient(45deg, #14b8a6, #0d9488);
+}
+
+/* scrollbar */
+
+.dark .promptlistContainer::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+.dark .promptlistContainer::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+.dark .promptlistContainer::-webkit-scrollbar-thumb:hover {
+  background: #14b8a6;
+}
+
+.category-form {
+  display: none;
+}
+
+/* theme buttons */
+
+.button-theme {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.sun {
+  display: none;
+}
+
+
+
+html
+
+
+ <div class="theme-button">
+        <button class="button-theme sun">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 48 48"
+          >
+            <path fill="#FF9800" d="M11 11H37V37H11z"></path>
+            <path
+              fill="#FF9800"
+              d="M11.272 11.272H36.728V36.728H11.272z"
+              transform="rotate(-45.001 24 24)"
+            ></path>
+            <path
+              fill="#FFEB3B"
+              d="M13,24c0,6.077,4.923,11,11,11c6.076,0,11-4.923,11-11s-4.924-11-11-11C17.923,13,13,17.923,13,24"
+            ></path>
+          </svg>
+        </button>
+        <button class="button-theme moon">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 30 30"
+          >
+            <path
+              fill="black"
+              fill-rule="evenodd"
+              d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    
+async function changeTheme() {
+  function addDark() {
+    document.body.classList.add("dark");
+    document.querySelector(".moon").style = "display:none";
+    document.querySelector(".sun").style = "display:block";
+  }
+
+  function removeDark() {
+    document.body.classList.remove("dark");
+    document.querySelector(".sun").style = "display:none";
+    document.querySelector(".moon").style = "display:block";
+  }
+  const data = await getTheme();
+  if (data.dark === true) {
+    addDark();
+  } else {
+    removeDark();
+  }
+  document
+    .querySelector(".theme-button")
+    .addEventListener("click", async function (e) {
+      if (e.target.closest(".button-theme").classList.contains("moon")) {
+        const theme = await saveTheme(true);
+        addDark();
+      } else if (e.target.closest(".button-theme").classList.contains("sun")) {
+        const theme = await saveTheme(false);
+        removeDark();
+      }
+    });
+}

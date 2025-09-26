@@ -593,41 +593,9 @@ async function addCategoryToNew() {
   categoryContainer.innerHTML = `<option value="all" class="selectedCategory">All</option> ${categorieshtml}`;
 }
 
-async function changeTheme() {
-  function addDark() {
-    document.body.classList.add("dark");
-    document.querySelector(".moon").style = "display:none";
-    document.querySelector(".sun").style = "display:block";
-  }
-
-  function removeDark() {
-    document.body.classList.remove("dark");
-    document.querySelector(".sun").style = "display:none";
-    document.querySelector(".moon").style = "display:block";
-  }
-  const data = await getTheme();
-  if (data.dark === true) {
-    addDark();
-  } else {
-    removeDark();
-  }
-  document
-    .querySelector(".theme-button")
-    .addEventListener("click", async function (e) {
-      if (e.target.closest(".button-theme").classList.contains("moon")) {
-        const theme = await saveTheme(true);
-        addDark();
-      } else if (e.target.closest(".button-theme").classList.contains("sun")) {
-        const theme = await saveTheme(false);
-        removeDark();
-      }
-    });
-}
-
 function init() {
   addCategoryToNew();
   loadTabContent("all");
-  changeTheme();
   form_tabs.addEventListener("click", function (e) {
     console.log(e.target);
     const category = document.querySelector(".form-tab-category");
