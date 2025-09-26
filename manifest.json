@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Prompt Saver",
+  "name": "Promptly - Prompt Saver",
   "version": "1.0",
   "description": "Save, search, and organize AI prompts into categories with favorites. Perfect for ChatGPT, Claude, Gemini Perplexity and many more.",
   "permissions": [],
